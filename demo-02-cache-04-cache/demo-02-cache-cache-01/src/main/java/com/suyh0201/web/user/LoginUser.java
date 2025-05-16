@@ -1,8 +1,9 @@
-package com.suyh0201.mvc.authentication;
+package com.suyh0201.web.user;
 
-import com.suyh0201.mvc.exception.ExceptionUtil;
+import com.suyh.base.web.constants.enums.BaseWebErrorCodeEnums;
+import com.suyh.base.web.exception.ExceptionUtil;
+import com.suyh.base.web.user.AbstractLoginUser;
 import com.suyh0201.sys.component.SysPermissionService;
-import com.suyh0201.sys.constant.ErrorCodeConstants;
 import com.suyh0201.sys.entity.mysql.SysUserEntity;
 import com.suyh0201.sys.service.SysUserService;
 import lombok.Getter;
@@ -11,14 +12,12 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Set;
 
 @Slf4j
-public class LoginUser {
-    public static final String LOGIN_USER_ATTRIBUTE_KEY = "loginUser";
-
+public class LoginUser extends AbstractLoginUser {
     public LoginUser(SysUserService userService, SysPermissionService permissionService, Long id, String username, String nickname) {
         if (userService == null || id == null || username == null || nickname == null) {
             log.error("userService or id or username is null!, id: {}, username: {}, nickname: {}",
                     id, username, nickname);
-            throw ExceptionUtil.business(ErrorCodeConstants.SERVICE_ERROR);
+            throw ExceptionUtil.business(BaseWebErrorCodeEnums.SERVICE_ERROR);
         }
 
         this.userService = userService;
