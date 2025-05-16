@@ -3,7 +3,7 @@ package com.suyh0201.business.mapper.mysql.business;
 import com.baomidou.dynamic.datasource.annotation.DS;
 import com.suyh.base.mp.mybatis.BaseMapperX;
 import com.suyh0201.business.entity.mysql.business.SchedulingTransferRecordEntity;
-import com.suyh0201.datasource.constants.DataSourceNames;
+import com.suyh0201.sys.constant.DataSourceNames;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
