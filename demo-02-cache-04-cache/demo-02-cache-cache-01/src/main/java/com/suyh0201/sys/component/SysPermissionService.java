@@ -12,7 +12,7 @@ import java.util.Set;
  * @author suyh
  * @since 2025-05-16
  */
-@Component
+@Component("ss")
 @RequiredArgsConstructor
 @Slf4j
 public class SysPermissionService {
