@@ -24,7 +24,7 @@
     <dependencies>
         <dependency>
             <groupId>com.suyh</groupId>
-            <artifactId>java-demo-base-mybatis-plus</artifactId>
+            <artifactId>suyh-demo-base-mybatis-plus</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
