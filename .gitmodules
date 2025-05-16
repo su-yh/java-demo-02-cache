@@ -1,0 +1,11 @@
+[submodule "suyh-demo-base"]
+    path = suyh-demo-base
+    branch = develop
+    # 默认的git 仓库路径
+    # 由于 .gitmodules 文件中的 URL 是人们首先尝试克隆/拉取的地方，因此请尽可能确保你使用的 URL 大家都能访问。
+    # 你也可以根据自己的需要，通过在本地执行 git config submodule.DbConnector.url <私有URL> 来覆盖这个选项的值。
+    # 如果可行的话，一个相对路径会很有帮助。
+    # url = git@github.com:su-yh/suyh-demo-base.git
+    url = ../suyh-demo-base.git
+
+

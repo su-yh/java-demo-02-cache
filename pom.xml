@@ -17,6 +17,7 @@
 
     <modules>
         <module>demo-02-cache-04-cache</module>
+        <module>suyh-demo-base</module>
     </modules>
 
 
