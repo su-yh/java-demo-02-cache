@@ -6,6 +6,7 @@
     # 你也可以根据自己的需要，通过在本地执行 git config submodule.DbConnector.url <私有URL> 来覆盖这个选项的值。
     # 如果可行的话，一个相对路径会很有帮助。
     # url = git@github.com:su-yh/suyh-demo-base.git
+    # 配置私有地址命令：git config submodule.DbConnector.url  git@github.com:su-yh/suyh-demo-base.git
     url = ../suyh-demo-base.git
 
 
