@@ -1,3 +1,11 @@
+spring:
+  datasource:
+    dynamic:
+      enabled: true
+      strict: true
+      primary: "master"
+
+
 base:
   datasource:
     hikari:

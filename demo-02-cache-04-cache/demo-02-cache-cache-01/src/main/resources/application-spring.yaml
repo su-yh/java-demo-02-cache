@@ -1,0 +1,14 @@
+spring:
+  autoconfigure:
+    exclude:
+#      - org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+      # 禁用spring-security 的用户相关的功能
+      - org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+
+
+
+
+
+
+
+

@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
@@ -12,7 +11,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Map;
 
 /**
  * 用户对象 sys_user
@@ -24,12 +22,9 @@ import java.util.Map;
 public class SysUserEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    public static boolean isAdmin(Long userId) {
-        return userId != null && 1L == userId;
+    public boolean isAdmin() {
+        return id != null && 1L == id;
     }
-
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    private Map<String, Object> params;
 
     @TableId(type = IdType.AUTO)
     private Long id;
@@ -107,10 +102,4 @@ public class SysUserEntity implements Serializable {
 
     /** 更新者 */
     private String updateBy;
-
-    /** 角色组 */
-    private Long[] roleIds;
-
-    /** 岗位组 */
-    private Long[] postIds;
 }

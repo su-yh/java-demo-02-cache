@@ -19,7 +19,7 @@ import java.util.List;
 @Component
 @RequiredArgsConstructor
 public class BaseWebMvcConfigurer implements WebMvcConfigurer {
-    private final SysUserService userService;
+    private final SysUserService sysUserService;
     private final SysPermissionService permissionService;
 
     @Override
@@ -46,7 +46,7 @@ public class BaseWebMvcConfigurer implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(@NonNull InterceptorRegistry registry) {
-        AuthenticationInterceptor loginInterceptor = new AuthenticationInterceptor(userService, permissionService);
+        AuthenticationInterceptor loginInterceptor = new AuthenticationInterceptor(sysUserService, permissionService);
         registry.addInterceptor(loginInterceptor).addPathPatterns("/**");
     }
 }

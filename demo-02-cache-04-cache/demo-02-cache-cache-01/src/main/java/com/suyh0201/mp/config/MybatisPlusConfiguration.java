@@ -2,6 +2,7 @@ package com.suyh0201.mp.config;
 
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import com.suyh0201.mp.handler.SqlHandler;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * 
  * @author ruoyi
  */
+@MapperScan(basePackages = {"com.suyh0201.business.mapper", "com.suyh0201.sys.mapper"})
 @Configuration
 public class MybatisPlusConfiguration {
     @Bean
