@@ -1,6 +1,7 @@
 package com.suyh0201.sys.service;
 
 import com.suyh0201.sys.entity.mysql.SysUserEntity;
+import com.suyh0201.sys.mapper.mysql.SysUserMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -13,17 +14,13 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Slf4j
 public class SysUserService {
-//    private final SysUserMapper sysUserMapper;
-//
-//    public SysUserEntity obtainUserById(Long id) {
-//        if (id == null) {
-//            return null;
-//        }
-//
-//        return sysUserMapper.selectById(id);
-//    }
+    private final SysUserMapper sysUserMapper;
 
     public SysUserEntity obtainUserById(Long id) {
-        return null;
+        if (id == null) {
+            return null;
+        }
+
+        return sysUserMapper.selectById(id);
     }
 }

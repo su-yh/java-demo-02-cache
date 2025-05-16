@@ -5,6 +5,7 @@ spring:
     import:
       - application-datasource.yaml
       - application-knife4j.yaml
+      - application-message_source.yaml
       - application-redis.yaml
       - application-spring.yaml
       - application-web.yaml
