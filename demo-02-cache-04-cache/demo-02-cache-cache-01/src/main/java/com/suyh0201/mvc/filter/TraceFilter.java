@@ -1,7 +1,7 @@
 package com.suyh0201.mvc.filter;
 
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
-import com.suyh0201.mp.handler.SqlHandler;
+import com.suyh.base.mp.handler.SqlHandler;
 import com.suyh0201.sys.constant.SystemConstants;
 import org.slf4j.MDC;
 import org.springframework.stereotype.Component;

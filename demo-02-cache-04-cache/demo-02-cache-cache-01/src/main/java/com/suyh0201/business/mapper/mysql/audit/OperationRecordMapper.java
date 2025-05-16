@@ -1,9 +1,9 @@
 package com.suyh0201.business.mapper.mysql.audit;
 
 import com.baomidou.dynamic.datasource.annotation.DS;
-import com.suyh0201.datasource.constants.DataSourceNames;
-import com.suyh0201.mp.mybatis.BaseMapperX;
+import com.suyh.base.mp.mybatis.BaseMapperX;
 import com.suyh0201.business.entity.mysql.audit.OperationRecordEntity;
+import com.suyh0201.datasource.constants.DataSourceNames;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
