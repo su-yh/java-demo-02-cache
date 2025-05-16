@@ -5,20 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.suyh</groupId>
-    <artifactId>java-demo-02-cache</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <artifactId>demo-02-cache-04-cache</artifactId>
 
     <packaging>pom</packaging>
-
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
     <modules>
-        <module>demo-02-cache-04-cache</module>
+        <module>demo-02-cache-cache-01</module>
     </modules>
-
-
-
 </project>

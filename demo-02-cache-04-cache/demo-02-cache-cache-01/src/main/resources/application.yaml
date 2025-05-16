@@ -1,0 +1,12 @@
+
+
+spring:
+  config:
+    import:
+      - application-datasource.yaml
+      - application-redis.yaml
+      - application-web.yaml
+
+
+
+
