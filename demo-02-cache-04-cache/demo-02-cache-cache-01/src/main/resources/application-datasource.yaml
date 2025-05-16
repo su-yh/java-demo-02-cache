@@ -4,6 +4,9 @@ spring:
       enabled: true
       strict: true
       primary: "master"
+  flyway:
+    # 系统实现的 FlywayAutoConfiguration 需要禁用掉
+    enabled: false
 
 
 base:

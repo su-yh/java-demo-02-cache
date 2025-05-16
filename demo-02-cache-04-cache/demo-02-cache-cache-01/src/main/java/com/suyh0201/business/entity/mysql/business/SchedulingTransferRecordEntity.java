@@ -4,8 +4,6 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.suyh0201.sys.constant.enums.OrderAuditStatusEnums;
-import com.suyh0201.sys.constant.enums.OrderOriginEnums;
 import com.suyh0201.sys.constant.enums.PayTypeEnums;
 import com.suyh0201.sys.constant.enums.TransferStatusEnums;
 import com.suyh0201.validation.groups.ValidationGroups;
@@ -83,20 +81,6 @@ public class SchedulingTransferRecordEntity {
     private String receiverUid;
 
     /**
-     * 购买信息 [{"sku":"SKU123","quantity":10,"price":99.99},{"sku":"SKU456","quantity":5,"price":59.99}]
-     */
-    @TableField("order_info")
-    @Schema(description = "购买信息 [{\"sku\":\"SKU123\",\"quantity\":10,\"price\":99.99},{\"sku\":\"SKU456\",\"quantity\":5,\"price\":59.99}]")
-    private String orderInfo;
-
-    /**
-     * 物流信息 [{"carrier":"usps","trackingNumber":"123456"},{"carrier":"ups","trackingNumber":"789012"}]
-     */
-    @TableField("logistics_info")
-    @Schema(description = "物流信息 [{\"carrier\":\"usps\",\"trackingNumber\":\"123456\"},{\"carrier\":\"ups\",\"trackingNumber\":\"789012\"}]")
-    private String logisticsInfo;
-
-    /**
      * 金额
      */
     @TableField("amount")
@@ -155,18 +139,10 @@ public class SchedulingTransferRecordEntity {
     @Schema(description = "渠道号")
     private String channel;
 
-    /**
-     * 状态（【1-等待中、2-成功（已付款已发货）、3-付款失败，4-已提交、 5-未发货， 6-代理商异常】）<br/>
-     * 修改为： 1-调度中、2-成功（已付款已发货）、3-调度失败，4-已付款未发货, 5-审核中<br/>
-     * 修改(20241029)：调度状态（1-调度中、2-成功（已付款已发货）、3-调度失败，4-已付款未发货, 5-审核中,6-黑名单uid订单,7-重复下单,订单失效）
-     */
     @TableField("status")
     @Schema(description = "状态")
     private TransferStatusEnums status;
 
-    /**
-     * 权重分
-     */
     @TableField("score")
     @Schema(description = "权重分")
     private Integer score;
@@ -219,35 +195,4 @@ public class SchedulingTransferRecordEntity {
     @TableField("utr")
     private String utr;
 
-    @TableField("order_audit_status")
-    @Schema(description = "订单审计状态")
-    private OrderAuditStatusEnums orderAuditStatus;
-
-    @TableField("audit_user_id")
-    @Schema(description = "订单审核用户主键ID")
-    private Long auditUserId;
-
-    @TableField("audit_user_nick")
-    @Schema(description = "订单审核用户昵称")
-    private String auditUserNick;
-
-    @TableField("audit_remark")
-    @Schema(description = "备注")
-    private String auditRemark;
-
-    @TableField("reason")
-    @Schema(description = "派单失败原因：code 值为空时，认为派单失败。")
-    private String reason;
-
-    @TableField("scheduling_count")
-    @Schema(description = "code当前额度单位时间调度的第几笔")
-    private Integer schedulingCount;
-
-    @TableField("origin")
-    @Schema(description = "订单命中来源[1:短信,2:邮件,3:人工审核]")
-    private OrderOriginEnums origin;
-
-    @TableField("origin_id")
-    @Schema(description = "命中来源表主键id")
-    private Long originId;
 }
