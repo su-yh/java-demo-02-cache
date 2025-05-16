@@ -1,0 +1,28 @@
+
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+
+
+# swagger 页面访问： http://localhost:${server.servlet.context-path}/doc.html
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  group-configs:
+    - group: 'system-user'
+      paths-to-match:
+        - "/system/user/**"
+      packages-to-scan:
+        - "com.suyh0201.sys.controller"
+    - group: 'scheduling-transfer-record'
+      paths-to-match:
+        - "/scheduling/transfer/record/**"
+      packages-to-scan:
+        - "com.suyh0201.business.controller"
+

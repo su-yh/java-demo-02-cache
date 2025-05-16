@@ -4,6 +4,7 @@ spring:
   config:
     import:
       - application-datasource.yaml
+      - application-knife4j.yaml
       - application-redis.yaml
       - application-web.yaml
 

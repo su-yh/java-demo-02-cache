@@ -4,11 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.suyh0201.mp.mysql.mapper.business.SchedulingTransferRecordMapper">
 
-    <resultMap id="SchedulingTransferRecordEntity" type="com.suyh0201.mp.mysql.entity.business.SchedulingTransferRecordEntity">
+    <resultMap id="SchedulingTransferRecordEntity" type="com.suyh0201.business.entity.mysql.business.SchedulingTransferRecordEntity">
         <id column="id" property="id" jdbcType="BIGINT" javaType="java.lang.Long"/>
         <result column="code" property="code" jdbcType="VARCHAR" javaType="java.lang.String"/>
         <result column="pnum" property="pnum" jdbcType="VARCHAR" javaType="java.lang.String"/>
-        <result column="pay_type" property="payType" jdbcType="TINYINT" javaType="com.suyh0201.constant.enums.PayTypeEnums"/>
+        <result column="pay_type" property="payType" jdbcType="TINYINT" javaType="com.suyh0201.sys.constant.enums.PayTypeEnums"/>
         <result column="tpp" property="tpp" jdbcType="VARCHAR" javaType="java.lang.String"/>
         <result column="card_no" property="cardNo" jdbcType="VARCHAR" javaType="java.lang.String"/>
         <result column="account" property="account" jdbcType="VARCHAR" javaType="java.lang.String"/>
@@ -23,7 +23,7 @@
         <result column="pn" property="pn" jdbcType="VARCHAR" javaType="java.lang.String"/>
         <result column="pkg" property="pkg" jdbcType="VARCHAR" javaType="java.lang.String"/>
         <result column="channel" property="channel" jdbcType="VARCHAR" javaType="java.lang.String"/>
-        <result column="status" property="status" jdbcType="TINYINT" javaType="com.suyh0201.constant.enums.TransferStatusEnums"
+        <result column="status" property="status" jdbcType="TINYINT" javaType="com.suyh0201.sys.constant.enums.TransferStatusEnums"
                 typeHandler="com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler"/>
         <result column="score" property="score" jdbcType="INTEGER" javaType="java.lang.Integer"/>
         <result column="mtime" property="mtime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
@@ -33,7 +33,7 @@
         <result column="dates" property="dates" jdbcType="INTEGER" javaType="java.lang.Integer"/>
         <result column="transfer_order_no" property="transferOrderNo" jdbcType="VARCHAR" javaType="java.lang.String"/>
         <result column="utr" property="utr" jdbcType="VARCHAR" javaType="java.lang.String"/>
-        <result column="order_audit_status" property="orderAuditStatus" jdbcType="TINYINT" javaType="com.suyh0201.constant.enums.OrderAuditStatusEnums"
+        <result column="order_audit_status" property="orderAuditStatus" jdbcType="TINYINT" javaType="com.suyh0201.sys.constant.enums.OrderAuditStatusEnums"
                 typeHandler="com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler"/>
         <result column="audit_user_id" property="auditUserId" jdbcType="BIGINT" javaType="java.lang.Long"/>
         <result column="audit_user_nick" property="auditUserNick" jdbcType="VARCHAR" javaType="java.lang.String"/>
@@ -42,7 +42,7 @@
         <result column="audit_remark" property="auditRemark" jdbcType="VARCHAR" javaType="java.lang.String"/>
         <result column="reason" property="reason" jdbcType="VARCHAR" javaType="java.lang.String"/>
         <result column="scheduling_count" property="schedulingCount" jdbcType="INTEGER" javaType="java.lang.Integer"/>
-        <result column="origin" property="origin" jdbcType="TINYINT" javaType="com.suyh0201.constant.enums.OrderOriginEnums"/>
+        <result column="origin" property="origin" jdbcType="TINYINT" javaType="com.suyh0201.sys.constant.enums.OrderOriginEnums"/>
         <result column="origin_id" property="originId" jdbcType="BIGINT" javaType="java.lang.Long"/>
     </resultMap>
 
