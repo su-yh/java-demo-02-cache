@@ -4,9 +4,9 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.suyh.base.web.validation.groups.ValidationGroups;
 import com.suyh0201.sys.constant.enums.PayTypeEnums;
 import com.suyh0201.sys.constant.enums.TransferStatusEnums;
-import com.suyh0201.validation.groups.ValidationGroups;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
