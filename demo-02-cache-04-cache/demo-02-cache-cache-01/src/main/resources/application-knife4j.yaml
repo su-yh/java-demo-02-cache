@@ -19,7 +19,7 @@ springdoc:
       paths-to-match:
         - "/system/user/**"
       packages-to-scan:
-        - "com.suyh0201.sys.controller"
+        - "com.suyh.sys.web.controller"
     - group: 'scheduling-transfer-record'
       paths-to-match:
         - "/scheduling/transfer/record/**"
