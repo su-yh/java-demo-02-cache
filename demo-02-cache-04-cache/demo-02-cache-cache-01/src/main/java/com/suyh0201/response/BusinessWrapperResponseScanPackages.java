@@ -1,6 +1,6 @@
 package com.suyh0201.response;
 
-import com.suyh.base.web.response.WrapperResponseScanPackages;
+import com.suyh.base.web.response.wrapper.WrapperResponseScanPackages;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
