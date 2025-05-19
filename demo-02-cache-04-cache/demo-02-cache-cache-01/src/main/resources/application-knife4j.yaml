@@ -15,9 +15,35 @@ springdoc:
   api-docs:
     path: /v3/api-docs
   group-configs:
-    - group: 'system-user'
+    # 分组信息也可以在这里配置，在代码的配置类里面配置也是可以的。
+    - group: 'ruoyi-system-user'
       paths-to-match:
         - "/system/user/**"
+      packages-to-scan:
+        - "com.suyh.ruoyi.web.controller"
+    - group: 'ruoyi-system-online'
+      paths-to-match:
+        - "/system/online/**"
+      packages-to-scan:
+        - "com.suyh.ruoyi.web.controller"
+    - group: 'ruoyi-system-role'
+      paths-to-match:
+        - "/system/role/**"
+      packages-to-scan:
+        - "com.suyh.ruoyi.web.controller"
+    - group: 'ruoyi-system-menu'
+      paths-to-match:
+        - "/system/menu/**"
+      packages-to-scan:
+        - "com.suyh.ruoyi.web.controller"
+    - group: 'user'
+      paths-to-match:
+        - "/user/**"
+      packages-to-scan:
+        - "com.suyh.sys.web.controller"
+    - group: 'file-system'
+      paths-to-match:
+        - "/system/file/**"
       packages-to-scan:
         - "com.suyh.sys.web.controller"
     - group: 'scheduling-transfer-record'
@@ -25,4 +51,7 @@ springdoc:
         - "/scheduling/transfer/record/**"
       packages-to-scan:
         - "com.suyh0201.business.controller"
+
+
+
 
