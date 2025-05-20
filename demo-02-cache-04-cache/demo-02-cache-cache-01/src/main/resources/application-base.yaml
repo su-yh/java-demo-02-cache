@@ -1,0 +1,10 @@
+sys:
+  web:
+    user:
+      captcha:
+        # 禁用2FA 校验功能
+        two-factor-auth-enabled: false
+
+
+
+

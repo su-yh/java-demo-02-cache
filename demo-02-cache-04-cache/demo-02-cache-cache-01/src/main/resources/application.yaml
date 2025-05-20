@@ -3,6 +3,7 @@
 spring:
   config:
     import:
+      - application-base.yaml
       - application-datasource.yaml
       - application-knife4j.yaml
       - application-message_source.yaml

@@ -6,6 +6,16 @@ server:
     context-path: "/suyh/local"
   port: 8015
 
+---
+spring:
+  config:
+    activate:
+      on-profile: "suyh"
+
+server:
+  servlet:
+    context-path: "/prod-api"
+
 
 
 
