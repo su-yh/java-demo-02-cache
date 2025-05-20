@@ -20,32 +20,32 @@ springdoc:
       paths-to-match:
         - "/system/user/**"
       packages-to-scan:
-        - "com.suyh.ruoyi.web.controller"
+        - "com.web.ruoyi.controller"
     - group: 'ruoyi-system-online'
       paths-to-match:
         - "/system/online/**"
       packages-to-scan:
-        - "com.suyh.ruoyi.web.controller"
+        - "com.web.ruoyi.controller"
     - group: 'ruoyi-system-role'
       paths-to-match:
         - "/system/role/**"
       packages-to-scan:
-        - "com.suyh.ruoyi.web.controller"
+        - "com.web.ruoyi.controller"
     - group: 'ruoyi-system-menu'
       paths-to-match:
         - "/system/menu/**"
       packages-to-scan:
-        - "com.suyh.ruoyi.web.controller"
+        - "com.web.ruoyi.controller"
     - group: 'user'
       paths-to-match:
         - "/user/**"
       packages-to-scan:
-        - "com.suyh.sys.web.controller"
+        - "com.web.sys.controller"
     - group: 'file-system'
       paths-to-match:
         - "/system/file/**"
       packages-to-scan:
-        - "com.suyh.sys.web.controller"
+        - "com.web.sys.controller"
     - group: 'scheduling-transfer-record'
       paths-to-match:
         - "/scheduling/transfer/record/**"
