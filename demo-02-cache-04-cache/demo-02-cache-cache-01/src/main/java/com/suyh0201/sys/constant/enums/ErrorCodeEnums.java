@@ -1,6 +1,6 @@
 package com.suyh0201.sys.constant.enums;
 
-import com.suyh.base.web.error.IErrorCode;
+import com.base.web.error.IErrorCode;
 
 /**
  * @author suyh

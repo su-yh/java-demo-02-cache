@@ -4,9 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.suyh.base.web.validation.groups.ValidationGroups;
-import com.suyh0201.sys.constant.enums.PayTypeEnums;
-import com.suyh0201.sys.constant.enums.TransferStatusEnums;
+import com.base.web.validation.groups.ValidationGroups;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -35,13 +33,6 @@ public class SchedulingTransferRecordEntity {
 
     @TableField("pnum")
     private String pnum;
-
-    /**
-     * 支付类型【1:tpp支付｜2:银行卡支付】
-     */
-    @TableField("pay_type")
-    @Schema(description = "支付类型")
-    private PayTypeEnums payType;
 
     /**
      * tpp
@@ -138,10 +129,6 @@ public class SchedulingTransferRecordEntity {
     @TableField("channel")
     @Schema(description = "渠道号")
     private String channel;
-
-    @TableField("status")
-    @Schema(description = "状态")
-    private TransferStatusEnums status;
 
     @TableField("score")
     @Schema(description = "权重分")
