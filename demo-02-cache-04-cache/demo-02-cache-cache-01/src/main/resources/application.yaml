@@ -4,6 +4,7 @@ spring:
   config:
     import:
       - application-base.yaml
+      - application-cache.yaml
       - application-datasource.yaml
       - application-knife4j.yaml
       - application-log.yaml
