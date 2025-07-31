@@ -21,7 +21,7 @@ public class CacheMenuComponent {
 
     private final CacheMenuMapper cacheMenuMapper;
 
-    // unless 参数，当返回值为null 时不做进行缓存
+    // unless 参数，当返回值为null 时不做进行缓存，不过我觉得返回结果为null 也缓存起来是比较好的，因为当该值在后续变更成有值了之后，会将该缓存给清除掉，所以不影响结果。
     // condition 参数：当参数 id != null 时才进行缓存
     @Cacheable(value = CACHE_NAME, key = "#id", unless = "#result == null", condition = "#id != null", cacheManager = CaffeineCacheConfiguration.MENU_CACHE_BEAN_NAME)
     public CacheMenuEntity selectById(Long id) {
