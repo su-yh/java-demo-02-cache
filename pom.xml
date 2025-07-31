@@ -17,7 +17,7 @@
 
     <modules>
         <module>demo-02-cache-04-cache</module>
-        <module>web-spring-boot-starter</module>
+<!--        <module>web-spring-boot-starter</module>-->
     </modules>
 
 
