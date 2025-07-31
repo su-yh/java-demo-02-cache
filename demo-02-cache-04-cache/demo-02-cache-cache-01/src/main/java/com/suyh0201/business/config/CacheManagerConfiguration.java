@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 @EnableConfigurationProperties(CaffeineCacheProperties.class)
 @Configuration
 @EnableCaching
-public class MultiCacheConfiguration {
+public class CacheManagerConfiguration {
     public static final String MENU_CACHE_MANAGER = "menuCacheManager";
 
     @Bean(name = MENU_CACHE_MANAGER)
