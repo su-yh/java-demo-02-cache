@@ -21,8 +21,8 @@ public class CacheMenuComponent {
 
     private final CacheMenuMapper cacheMenuMapper;
 
-    // unless 参数，当返回值为null 时不做进行缓存，不过我觉得返回结果为null 也缓存起来是比较好的，因为当该值在后续变更成有值了之后，会将该缓存给清除掉，所以不影响结果。
-    // condition 参数：当参数 id != null 时才进行缓存
+    // condition 参数，表达式结果为true 则正常执行缓存逻辑（查询缓存 → 未命中则执行方法 → 写入缓存），否则完全跳过缓存操作（直接执行方法，不查询也不写入缓存）
+    // unless 参数，表达式结果为true 不写入缓存，否则写入缓存，在condition 执行之后
     @Cacheable(value = CACHE_NAME, key = "#id", unless = "#result == null", condition = "#id != null", cacheManager = CacheManagerConfiguration.MENU_CACHE_MANAGER)
     public CacheMenuEntity selectById(Long id) {
         log.info("select by id, from db, id: {}", id);
